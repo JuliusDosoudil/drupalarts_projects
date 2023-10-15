@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Audio</title>
+    <link rel="stylesheet" href="audio.css">
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="audio.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Audio</h1>
+    </header>
+
+    <main>
+        <audio id="" class="" src="audio.mp3" controls></audio>
+
+        <div id="waveform-controls">
+            <!-- Buttons -->
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Buttons
+        let play = document.getElementById("play");
+        let pause = document.getElementById("pause");
+        let audio = new Audio("audio.mp3");
+
+        play.addEventListener("click", function () {
+            audio.play();
+        })
+        pause.addEventListener("click", function () {
+            audio.pause();
+        })
+    </script>
+</body>
+
+</html>
